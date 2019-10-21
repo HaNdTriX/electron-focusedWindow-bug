@@ -1,0 +1,27 @@
+<h1>Instructions</h1>
+<p>Select an input and zoom via <code>CmdOrCtrl+Plus</code> <code>CmdOrCtrl+Minus</code></code>
+<p>You see that always the last webview gets zoomed</p>
+
+<h2>CONTEXT: BrowserWindow</h2>
+<input type="text" data-name='BrowserWindow'><br><br>
+<webview data-name='WebView1' src='./webview1.html'></webview>
+<webview data-name='WebView2' src='./webview2.html'></webview>
+
+
+
+
+
+<!-- JUST FOR DEBUGGING -->
+<h2>ActiveElement</h2>
+<div></div>
+<script>
+  function handleActiveElementChange () {
+    document
+      .querySelector('div')
+      .innerHTML = document.activeElement.dataset.name
+    console.log(document.activeElement)
+  }
+  window.addEventListener('blur', handleActiveElementChange, true)
+  window.addEventListener('focus', handleActiveElementChange, true)
+  handleActiveElementChange()
+</script>
