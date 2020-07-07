@@ -5,7 +5,7 @@
   "author": "Henrik Wenz <HaNdTriX@gmail.com> (https://github.com/HaNdTriX)",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^9.1.0"
   },
   "scripts": {
     "start": "electron ."
